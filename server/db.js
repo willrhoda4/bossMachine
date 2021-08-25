@@ -233,12 +233,12 @@ const updateInstanceInDatabase = (modelType, instance) => {
   if (instanceIndex > -1 && model.isValid(instance)) {
     model.data[instanceIndex] = instance;
     return model.data[instanceIndex];
-  } else {
+  } else { 
     return null;
   }
 }
 
-const deleteFromDatabasebyId = (modelType, id) => {
+const deleteFromDatabaseById = (modelType, id) => {
   const model = findDataArrayByName(modelType);
   if (model === null) {
     return null;
@@ -269,6 +269,6 @@ module.exports = {
   getFromDatabaseById,
   addToDatabase,
   updateInstanceInDatabase,
-  deleteFromDatabasebyId,
+  deleteFromDatabaseById,
   deleteAllFromDatabase,
 };
